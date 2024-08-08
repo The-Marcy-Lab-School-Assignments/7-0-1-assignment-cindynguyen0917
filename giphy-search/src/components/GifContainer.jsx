@@ -1,11 +1,11 @@
 
 function GifContainer({ gifs }) {
     return (
-        <ul>
+        <ul >
             {
                 gifs.map((gif) => (
                     <li key={gif.id}>
-                        <img src={gif.images.original.url}></img>
+                        <img src={gif.images.original.url} alt={`this is an image of: ${gif.id}`}></img>
                     </li>
                 ))
             }
