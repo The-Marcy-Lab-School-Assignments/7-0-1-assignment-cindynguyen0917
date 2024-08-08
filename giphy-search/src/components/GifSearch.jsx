@@ -1,8 +1,8 @@
-function GifSearch() {
+function GifSearch({ query, setQuery }) {
     return (
         <form>
             <label htmlFor="searchInput">Enter a Search Term </label>
-            <input type="text" className="form-control" id="searchInput" />
+            <input onChange={event => setQuery(event.target.value)} type="text" className="form-control" id="searchInput" value={query} />
             <button type="submit" className="btn btn-success">Search</button>
         </form>
     )
